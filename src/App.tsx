@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Element } from 'react-scroll';
+import {  Element } from 'react-scroll';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,11 +11,11 @@ import './App.css'; // Import the CSS file
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/nuvolink">
       <Header />
     
       <Routes>
-        <Route path="/" element={
+        <Route path="/nuvolink" element={
           <>
             <Element name="home" className="full-height"><Home /></Element>
             <Element name="products" className="full-height"><Products /></Element>
