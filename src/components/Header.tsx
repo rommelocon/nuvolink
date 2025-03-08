@@ -51,7 +51,7 @@ const ContactNavLink = styled(NavLink)`
 const Header = () => {
   return (
     <HeaderContainer>
-      <Link to="/nuvolink">
+      <Link to="/">
         <img src={logo} alt="NUVOLINK Logo" style={{ height: '70px' }} />
       </Link>
       <Nav>
