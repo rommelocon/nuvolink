@@ -16,12 +16,19 @@ const AboutTitle = styled.h2`
     margin-bottom: 1.5rem;
 `;
 
+const AboutContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+`;
+
 const AboutDescription = styled.p`
     font-size: 1.2rem;
     color: #555;
-    max-width: 800px;
-    margin: 0 auto 2rem;
     text-align: justify;
+    margin-bottom: 2rem;
 `;
 
 const LearnMoreButton = styled.button`
@@ -52,17 +59,19 @@ const AboutSection = () => {
     return (
         <AboutContainer>
             <AboutTitle>About Nuvolink HomeTechnologies</AboutTitle>
-            <AboutDescription>
+            <AboutContent>
                 <AboutImage src={aboutImage} alt="Nuvolink HomeTechnologies" />
-                At Nuvolink HomeTechnologies, we are pioneers in the world of IoT (Internet of Things) devices, delivering affordable yet high-quality products that transform your everyday living into a glimpse of the future.
-            </AboutDescription>
-            <AboutDescription>
-                With a commitment to innovation and accessibility, we empower homeowners to control and automate their spaces seamlessly through smart technology.
-            </AboutDescription>
-            <AboutDescription>
-                Our expertise lies in crafting intuitive solutions that bridge the gap between modern homes and the future of living. We believe that smart living should be within everyone’s reach and we are here to make that vision a reality.
-            </AboutDescription>
-            <LearnMoreButton>Learn More</LearnMoreButton>
+                <AboutDescription>
+                    At Nuvolink HomeTechnologies, we are pioneers in the world of IoT (Internet of Things) devices, delivering affordable yet high-quality products that transform your everyday living into a glimpse of the future.
+                </AboutDescription>
+                <AboutDescription>
+                    With a commitment to innovation and accessibility, we empower homeowners to control and automate their spaces seamlessly through smart technology.
+                </AboutDescription>
+                <AboutDescription>
+                    Our expertise lies in crafting intuitive solutions that bridge the gap between modern homes and the future of living. We believe that smart living should be within everyone’s reach and we are here to make that vision a reality.
+                </AboutDescription>
+                <LearnMoreButton>Learn More</LearnMoreButton>
+            </AboutContent>
         </AboutContainer>
     );
 };

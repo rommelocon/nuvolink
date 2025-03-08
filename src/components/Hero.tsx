@@ -1,36 +1,18 @@
-import styled from 'styled-components';
 import bgImage from '../assets/bg_image.png';
-
-const HeroContainer = styled.section`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    text-align: center;
-    padding: 0 2rem;
-`;
-
-const HeroTitle = styled.h1`
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    white-space: pre-wrap;
-`;
 
 const Hero = () => {
     return (
-        <HeroContainer style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <HeroTitle style={{ alignSelf: 'flex-end', color: 'white' }}>
+        <section
+            className="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-gray-100 to-gray-300 text-center p-8 animate-fadeIn"
+            style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
+            <h1 className="text-6xl font-bold text-white mb-4 text-shadow-lg whitespace-pre-wrap animate-slideInFromLeft" style={{ alignSelf: 'flex-end' }}>
                 Innovating Your Home,{'\n'}Connecting Your Future
-            </HeroTitle>
-            {/* <HeroSubtitle>
+            </h1>
+            {/* <p className="text-lg text-gray-700">
                 Discover the latest in home technologies and smart solutions with NUVOLINK.
-            </HeroSubtitle> */}
-        </HeroContainer>
+            </p> */}
+        </section>
     );
 };
 

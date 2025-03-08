@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import Hero from '../components/Hero';
-import AboutSection from '../components/About';
 import '../Home.css'; // Import the CSS file
 
 const Home = () => {

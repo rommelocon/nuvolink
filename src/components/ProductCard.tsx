@@ -1,33 +1,21 @@
-import styled from 'styled-components';
+import React from 'react';
 
-const Card = styled.div`
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem;
-  width: 200px;
-  text-align: center;
-`;
-
-const ProductImage = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-`;
-
-interface Product {
-  image: string;
-  name: string;
-  price: number;
+interface ProductCardProps {
+  product: {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+  };
 }
 
-const ProductCard = ({ product }: { product: Product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <Card>
-      <ProductImage src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
-      <p>${product.price}</p>
-    </Card>
+    <div className="bg-white rounded-lg shadow-md p-6 w-72 text-left flex flex-col">
+      <img className="w-full rounded-t-lg mb-4" src={product.image} alt={product.name} />
+      <h2 className="text-xl font-bold text-gray-800 mb-4">{product.name}</h2>
+      <p className="text-gray-600 flex-grow">{product.description}</p>
+    </div>
   );
 };
 
