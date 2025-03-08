@@ -13,9 +13,8 @@ const App = () => {
   return (
     <Router basename="/nuvolink">
       <Header />
-    
       <Routes>
-        <Route path="/nuvolink" element={
+        <Route path="/" element={
           <>
             <Element name="home" className="full-height"><Home /></Element>
             <Element name="products" className="full-height"><Products /></Element>
