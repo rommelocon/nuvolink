@@ -8,7 +8,7 @@ export default defineConfig({
     tailwindcss(),
   
   ],
-  base: '/nuvolink/', // Set this to your repository name
+  base: '/nuvolink', // Set this to your repository name
   build: {
     outDir: 'dist'
   }
